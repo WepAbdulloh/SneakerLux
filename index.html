@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SneakerLux - Premium Krossovkalar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo" onclick="showPage('home')">SneakerLux</div>
+            <ul class="nav-links">
+                <li><a onclick="showPage('home')" class="nav-link">Bosh sahifa</a></li>
+                <li><a onclick="showPage('products')" class="nav-link">Mahsulotlar</a></li>
+                <li><a onclick="showPage('brands')" class="nav-link">Brendlar</a></li>
+                <li><a onclick="showPage('contact')" class="nav-link">Aloqa</a></li>
+            </ul>
+            <button class="cart-btn" onclick="showPage('cart')">🛒 Savatcha (<span id="cartCount">0</span>)</button>
+        </nav>
+    </header>
+
+    <!-- Home Page -->
+    <div id="home" class="page active">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Premium Krossovkalar</h1>
+                <p>Dunyoning eng mashhur brendlaridan original krossovkalar. Sifat, stil va qulaylik bir joyda. Har bir qadam sizning shaxsiy uslubingizni aks ettirsin.</p>
+                <button class="cta-btn" onclick="showPage('products')">Xarid qilish</button>
+            </div>
+        </section>
+        
+        <div class="content-section">
+            <h2 class="section-title">Nima uchun bizni tanlashadi?</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>✅ 100% Original</h3>
+                    <p>Barcha mahsulotlar rasmiy distribyutorlardan olingan va originalligiga kafolat beramiz</p>
+                </div>
+                <div class="info-card">
+                    <h3>🚚 Tez yetkazib berish</h3>
+                    <p>Toshkent bo'ylab 1 kun, boshqa viloyatlarga 2-3 kun ichida yetkazib beramiz</p>
+                </div>
+                <div class="info-card">
+                    <h3>🔄 14 kun qaytarish</h3>
+                    <p>Agar mahsulot sizga yoqmasa, 14 kun ichida qaytarib, pulni qaytarib olishingiz mumkin</p>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a onclick="showPage('about')">Biz haqimizda</a>
+                    <a onclick="showPage('delivery')">Yetkazib berish</a>
+                    <a onclick="showPage('warranty')">Kafolat</a>
+                    <a onclick="showPage('contact')">Aloqa</a>
+                    <a onclick="showPage('help')">Yordam</a>
+                </div>
+                <p>&copy; 2024 SneakerLux. Barcha huquqlar himoyalangan.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Products Page -->
+    <div id="products" class="page">
+        <div class="content-section">
+            <h2 class="section-title">Mashhur Mahsulotlar</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image"><img src="images/airmax premium.webp" alt=""></div>
+                    <h3 class="product-title">Air Max Premium</h3>
+                    <p class="product-brand">Nike</p>
+                    <div class="product-price">1,200,000 so'm</div>
+                    <button class="add-to-cart" onclick="addToCart('Air Max Premium', 'Nike', 1200000, '👟')">Savatga qo'shish</button>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image"><img src="images/ultraboost.webp" alt=""></div>
+                    <h3 class="product-title">Ultra Boost 22</h3>
+                    <p class="product-brand">Adidas</p>
+                    <div class="product-price">1,500,000 so'm</div>
+                    <button class="add-to-cart" onclick="addToCart('Ultra Boost 22', 'Adidas', 1500000, '🏃')">Savatga qo'shish</button>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image"><img src="images/Chuck Taylor All Star.jpg" alt=""></div>
+                    <h3 class="product-title">Chuck Taylor All Star</h3>
+                    <p class="product-brand">Converse</p>
+                    <div class="product-price">800,000 so'm</div>
+                    <button class="add-to-cart" onclick="addToCart('Chuck Taylor All Star', 'Converse', 800000, '⚡')">Savatga qo'shish</button>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image"><img src="images/Old Skool Pro.webp" alt=""></div>
+                    <h3 class="product-title">Old Skool Pro</h3>
+                    <p class="product-brand">Vans</p>
+                    <div class="product-price">900,000 so'm</div>
+                    <button class="add-to-cart" onclick="addToCart('Old Skool Pro', 'Vans', 900000, '🔥')">Savatga qo'shish</button>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image"><img src="images/Classic Leather.jpg" alt=""></div>
+                    <h3 class="product-title">Classic Leather</h3>
+                    <p class="product-brand">Reebok</p>
+                    <div class="product-price">700,000 so'm</div>
+                    <button class="add-to-cart" onclick="addToCart('Classic Leather', 'Reebok', 700000, '💎')">Savatga qo'shish</button>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image"><img src="images/Suede Classic.webp" alt=""></div>
+                    <h3 class="product-title">Suede Classic</h3>
+                    <p class="product-brand">Puma</p>
+                    <div class="product-price">650,000 so'm</div>
+                    <button class="add-to-cart" onclick="addToCart('Suede Classic', 'Puma', 650000, '🌟')">Savatga qo'shish</button>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image"><img src="images/Air Force 1.jpg" alt=""></div>
+                    <h3 class="product-title">Air Force 1</h3>
+                    <p class="product-brand">Nike</p>
+                    <div class="product-price">1,100,000 so'm</div>
+                    <button class="add-to-cart" onclick="addToCart('Air Force 1', 'Nike', 1100000, '🎯')">Savatga qo'shish</button>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image"><img src="images/Stan Smith.jpeg" alt=""></div>
+                    <h3 class="product-title">Stan Smith</h3>
+                    <p class="product-brand">Adidas</p>
+                    <div class="product-price">950,000 so'm</div>
+                    <button class="add-to-cart" onclick="addToCart('Stan Smith', 'Adidas', 950000, '🚀')">Savatga qo'shish</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Brands Page -->
+    <div id="brands" class="page">
+        <div class="content-section">
+            <h2 class="section-title">Mashhur Brendlar</h2>
+            <div class="brand-grid">
+                <div class="brand-card">
+                    <div class="brand-logo">✔️</div>
+                    <h3 class="brand-name">Nike</h3>
+                    <p class="brand-desc">Dunyoning eng mashhur sport brendi. Innovatsiya va sifatning ramzi.</p>
+                </div>
+                
+                <div class="brand-card">
+                    <div class="brand-logo">🔺</div>
+                    <h3 class="brand-name">Adidas</h3>
+                    <p class="brand-desc">Nemis sifati va zamonaviy texnologiyalar. Sport va moda uchun.</p>
+                </div>
+                
+                <div class="brand-card">
+                    <div class="brand-logo">⭐</div>
+                    <h3 class="brand-name">Converse</h3>
+                    <p class="brand-desc">Klassik amerikan uslubi. Har doim moda bo'lgan dizayn.</p>
+                </div>
+                
+                <div class="brand-card">
+                    <div class="brand-logo">🏁</div>
+                    <h3 class="brand-name">Vans</h3>
+                    <p class="brand-desc">Skeyting madaniyati va street style uchun eng yaxshi tanlov.</p>
+                </div>
+                
+                <div class="brand-card">
+                    <div class="brand-logo">🔶</div>
+                    <h3 class="brand-name">Reebok</h3>
+                    <p class="brand-desc">Fitness va sport uchun maxsus ishlab chiqilgan krossovkalar.</p>
+                </div>
+                
+                <div class="brand-card">
+                    <div class="brand-logo">🐾</div>
+                    <h3 class="brand-name">Puma</h3>
+                    <p class="brand-desc">Tezlik va kuch ramzi. Sport va hayot uchun.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Page -->
+    <div id="cart" class="page">
+        <div class="content-section">
+            <h2 class="section-title">Savatcha</h2>
+            <div id="cartContent">
+                <div class="cart-items" id="cartItems">
+                    <p style="text-align: center; opacity: 0.7; font-size: 1.2rem;">Savatcha bo'sh</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Page -->
+    <div id="contact" class="page">
+        <div class="content-section">
+            <h2 class="section-title">Biz bilan bog'laning</h2>
+            
+            <div class="info-grid" style="margin-bottom: 3rem;">
+                <div class="info-card">
+                    <h3>📍 Manzil</h3>
+                    <p>Toshkent shahar, Chilonzor tumani, Bunyodkor ko'chasi 12-uy</p>
+                </div>
+                <div class="info-card">
+                    <h3>📞 Telefon</h3>
+                    <p>+998 xx xxx xx xx<br>+998 xx xxx xx xx</p>
+                </div>
+                <div class="info-card">
+                    <h3>📧 Email</h3>
+                    <p>abdulloh@dark.osion<br>abdullohrtopp@gmail.com</p>
+                </div>
+            </div>
+            
+            <form class="contact-form" onsubmit="submitContactForm(event)">
+                <div class="form-group">
+                    <label for="name">Ismingiz</label>
+                    <input type="text" id="name" name="name" placeholder="Ismingizni kiriting" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Email manzilingizni kiriting" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telefon</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Telefon raqamingizni kiriting" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Xabar</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Xabaringizni yozing" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Xabar yuborish</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- About Page -->
+    <div id="about" class="page">
+        <div class="content-section">
+            <h2 class="section-title">Biz haqimizda</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>🎯 Bizning maqsadimiz</h3>
+                    <p>SneakerLux - O'zbekistondagi eng yirik premium krossovkalar do'koni. Biz 2020-yildan beri faoliyat yuritamiz va mijozlarimizga eng sifatli mahsulotlarni taqdim etishga intilamiz.</p>
+                </div>
+                <div class="info-card">
+                    <h3>🏆 Bizning yutuqlarimiz</h3>
+                    <p>5000+ mamnun mijoz, 50+ mashhur brend, 100% original mahsulotlar kafolati. Biz O'zbekistonda birinchi bo'lib premium krossovkalar bozorini yaratdik.</p>
+                </div>
+                <div class="info-card">
+                    <h3>👥 Bizning jamoa</h3>
+                    <p>Bizning jamoamiz sport va moda sohasidagi tajribali mutaxassislardan iborat. Har bir mijozga individual yondashuv va professional maslahat beramiz.</p>
+                </div>
+                <div class="info-card">
+                    <h3>🌟 Bizning qadriyatlarimiz</h3>
+                    <p>Sifat, ishonch, innovatsiya va mijozlarga g'amxo'rlik - bizning asosiy qadriyatlarimiz. Biz har doim mijozlarimizning ehtiyojlarini birinchi o'ringa qo'yamiz.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delivery Page -->
+    <div id="delivery" class="page">
+        <div class="content-section">
+            <h2 class="section-title">Yetkazib berish</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>🚚 Yetkazib berish shartlari</h3>
+                    <p><strong>Toshkent shahri:</strong> 1 kun ichida, 50,000 so'm<br>
+                    <strong>Viloyatlar:</strong> 2-3 kun ichida, 80,000 so'm<br>
+                    <strong>500,000 so'mdan yuqori:</strong> Bepul yetkazib berish</p>
+                </div>
+                <div class="info-card">
+                    <h3>📦 Buyurtma holati</h3>
+                    <p>Buyurtmangiz holatini telefon orqali yoki SMS xabar orqali kuzatishingiz mumkin. Har bir bosqich haqida sizni xabardor qilamiz.</p>
+                </div>
+                <div class="info-card">
+                    <h3>⏰ Yetkazib berish vaqti</h3>
+                    <p>Ish kunlari: 9:00 dan 20:00 gacha<br>
+                    Dam olish kunlari: 10:00 dan 18:00 gacha<br>
+                    Aniq vaqtni oldindan kelishamiz</p>
+                </div>
+                <div class="info-card">
+                    <h3>✅ Qabul qilish</h3>
+                    <p>Mahsulotni qabul qilishdan oldin tekshirib ko'ring. Agar biror muammo bo'lsa, darhol kuryer bilan bog'laning.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Warranty Page -->
+    <div id="warranty" class="page">
+        <div class="content-section">
+            <h2 class="section-title">Kafolat</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>🛡️ Kafolat muddati</h3>
+                    <p>Barcha mahsulotlarga 12 oy kafolat beramiz. Kafolat ishlab chiqaruvchi nuqsonlari uchun amal qiladi.</p>
+                </div>
+                <div class="info-card">
+                    <h3>🔄 Almashtirish shartlari</h3>
+                    <p>14 kun ichida sababsiz qaytarish mumkin. Mahsulot yangi holatda bo'lishi kerak. Etiketka va qadoq saqlanishi shart.</p>
+                </div>
+                <div class="info-card">
+                    <h3>💰 Pul qaytarish</h3>
+                    <p>Pul qaytarish 3-5 ish kuni ichida amalga oshiriladi. Plastik karta orqali to'langan bo'lsa, kartaga qaytariladi.</p>
+                </div>
+                <div class="info-card">
+                    <h3>🔧 Ta'mirlash</h3>
+                    <p>Kafolat muddati ichida bepul ta'mirlash xizmati. Ta'mirlash 7-14 kun davom etadi.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Help Page -->
+    <div id="help" class="page">
+        <div class="content-section">
+            <h2 class="section-title">Yordam</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>❓ Tez-tez so'raladigan savollar</h3>
+                    <p><strong>Mahsulotlar originalmi?</strong><br>
+                    Ha, barcha mahsulotlar 100% original va rasmiy distribyutorlardan olingan.</p>
+                    <p><strong>To'lov usullari qanday?</strong><br>
+                    Naqd, plastik karta va bo'lib to'lash imkoniyati mavjud.</p>
+                </div>
+                <div class="info-card">
+                    <h3>📏 O'lcham jadvali</h3>
+                    <p>Har bir mahsulot uchun alohida o'lcham jadvali mavjud. Noto'g'ri o'lcham tanlasangiz, 14 kun ichida almashtirishingiz mumkin.</p>
+                </div>
+                <div class="info-card">
+                    <h3>🎁 Chegirmalar</h3>
+                    <p>Doimiy mijozlar uchun 5-15% chegirma. Bayram kunlarida maxsus aksiyalar o'tkazamiz.</p>
+                </div>
+                <div class="info-card">
+                    <h3>📞 Qo'llab-quvvatlash</h3>
+                    <p>24/7 qo'llab-quvvatlash xizmati. Telefon, email yoki chat orqali murojaat qilishingiz mumkin.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
